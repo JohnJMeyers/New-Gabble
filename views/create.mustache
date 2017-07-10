@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="/css/master.css">
+  </head>
+  <body>
+    <div class="links">
+      <a href="/">Gabble</a> <span class='createSpans'>|</span>
+      <a href="/create">Create a new gab</a> <span class='createSpans'>|</span>
+      <p>Logged in as {{username}}</p> <span class='gabbleSpans'>|</span>
+      <form class="logout" action="/logout" method="post">
+        <button type="submit" name="logout">Log out</button>
+      </form>
+    </div>
+    <h1>Create a new gab</h1>
+    <br>
+    <form class="" action="/create" method="post">
+      <div class="">
+        <textarea name="createArea" rows="8" cols="80">{{gab.messages}}</textarea>
+      </div>
+      <div class="">
+        <input type="submit" name="createSubmit" value="Save gab">
+      </div>
+    </form>
+    {{#errors}}
+          <li>{{message}}</li>
+        {{/errors}}
+  </body>
+</html>

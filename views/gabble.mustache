@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="/css/master.css">
+  </head>
+  <body>
+    <div class="links">
+      <a href="/">Gabble</a> <span class='gabbleSpans'>|</span>
+      <a href="/create">Create a new gab</a> <span class='gabbleSpans'>|</span>
+      <p>Logged in as {{username}}</p> <span class='gabbleSpans'>|</span>
+      <form class="logout" action="/logout" method="post">
+        <button type="submit" name="logout">Log out</button>
+      </form>
+    </div>
+
+    <div class="gabBox">
+      <div class="gabText">
+        <div class="gabName">
+          <p class='strong'><strong>{{username}}:</strong></p>
+          {{#gabs}}
+
+          <p>{{text}}</p>
+        </div>
+        <div class="gabDate">
+          {{createdAt}}
+          {{likes}}
+        </div>
+      </div>
+      <div class="gabDelete">
+        <form class="" action="/delete" method="post">
+          <button type="submit" name="id" value="{{id}}">DELETE</button>
+        </form>
+      </div>
+    </div>
+    {{/gabs}}
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="/css/master.css">
+  </head>
+  <body>
+    <div class="links">
+      <a href="/">Gabble</a> <span class='gabbleSpans'>|</span>
+      <a href="/create">Create a new gab</a> <span class='gabbleSpans'>|</span>
+      <p>Logged in as {{username}}</p> <span class='gabbleSpans'>|</span>
+      <form class="logout" action="/logout" method="post">
+        <button type="submit" name="logout">Log out</button>
+      </form>
+    </div>
+    <div class="gabBox">
+      <div class="gabText">
+        <div class="gabName">
+
+          {{#users}}
+          <p class='strong'><strong>{{username}}:</strong></p>
+          <p>{{password}}</p>
+          <p>{{id}}</p>
+        {{/users}}
+        <!-- {{#user}}
+        <p class='strong'><strong>{{username}}:</strong></p>
+        <p>{{password}}</p>
+        <p>{{id}}</p>
+      {{/user}} -->
+<!-- 
+          {{#model}}
+          <p>{{text}}</p>
+        </div>
+        <div class="gabDate">
+          {{createdAt}}
+          {{date}}
+          {{/model}}
+          {{likes}}
+        </div>
+      </div>
+      <div class="gabDelete">
+        <form class="" action="/delete" method="post">
+          <button type="submit" name="id" value="{{id}}">DELETE</button>
+        </form>
+      </div>
+    </div>
+
+  </body>
+</html> --> -->

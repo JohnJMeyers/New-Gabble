@@ -1,0 +1,26 @@
+userId: {
+  type: Sequelize.INTEGER,
+  allowNull: false,
+  references: {
+    model: "user",
+    key: "id"
+  }
+},
+
+
+userId: {
+  type: Sequelize.INTEGER,
+  allowNull: false,
+  references: {
+    model: "User",
+    key: "id"
+  }
+},
+gabId: {
+  type: Sequelize.INTEGER,
+  allowNull: false,
+  references: {
+    model: "Gab",
+    key: "id"
+  }
+},
